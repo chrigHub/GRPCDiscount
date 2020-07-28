@@ -1,0 +1,30 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package jku.bac.grpc.server.offeringdiscount;
+
+message OfferingDiscountItem {
+  string id = 1;
+  string label = 2;
+  double prize = 3;
+  int32 amount = 4;
+}
+message Sync {
+  string itemLabel = 1;
+}
+
+message Null {
+
+}
+
+message OfferingRequest{
+  repeated OfferingDiscountItem transferItems = 1;
+}
+
+message DiscountResponse{
+  repeated OfferingDiscountItem transferItems = 1;
+}
+
+service OfferingDiscountService {
+  rpc getDiscount (OfferingRequest) returns (DiscountResponse);
+  rpc syncDB (Sync) returns (Null);
+}
