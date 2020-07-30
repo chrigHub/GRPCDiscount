@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>jku.bac.grpc</groupId>
-	<artifactId>Discount</artifactId>
+	<artifactId>GRPCDiscount</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Discount</name>
+	<name>GRPCDiscount</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
